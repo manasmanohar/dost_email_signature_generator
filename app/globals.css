@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0; /* Default text color */
+  --bg-color-light: #FFFFFF; /* Light mode background color */
+  --text-color-light: #000000; /* Light mode text color */
+  --bg-color-dark: #000000;   /* Dark mode background color */
+  --text-color-dark: #F9F9F9; /* Dark mode text color */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; /* Default text color in dark mode */
+  }
+}
+
+body {
+  background-color: var(--bg-color-dark); /* Default background color for dark mode */
+  color: var(--text-color-dark); /* Default text color for dark mode */
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--bg-color-light); /* Light mode background color */
+    color: var(--text-color-light); /* Light mode text color */
+  }
+}
