@@ -10,18 +10,18 @@ const InputForm = ({ data, setData }) => {
   };
 
   return (
-    <div className='text-black'>
+    <div className='mb-0'>
        <div className="mb-4 ">
         <label htmlFor="name" className="block font-semibold mb-2">
         Valediction (Complimentary Close)
         </label>
         <input
           type="text"
-          name="close"
+          name="valediction"
           value={data.valediction}
           onChange={handleInputChange}
           placeholder="Regards, Sincerely, Best "
-          className="mb-4 p-2 rounded border w-full"
+          className="mb-4 p-2 rounded border w-full text-black"
         />
       </div>
       <div className="mb-4">
@@ -30,11 +30,11 @@ const InputForm = ({ data, setData }) => {
         </label>
         <input
           type="text"
-          name="names"
+          name="name"
           value={data.name}
           onChange={handleInputChange}
           placeholder="Your Full Name"
-          className="mb-4 p-2 rounded border w-full"
+          className="mb-4 p-2 rounded border w-full text-black"
         />
       </div>
 
@@ -48,14 +48,14 @@ const InputForm = ({ data, setData }) => {
           value={data.position}
           onChange={handleInputChange}
           placeholder="Your Position"
-          className="mb-4 p-2 rounded border w-full"
+          className="mb-4 p-2 rounded border w-full text-black"
         />
       </div>
 
       
 
       <div className="mb-4">
-        <label htmlFor="email" className="block font-semibold mb-2">
+        <label htmlFor="email" className="block font-semibold mb-2 ">
           Email Address
         </label>
         <input
@@ -64,11 +64,11 @@ const InputForm = ({ data, setData }) => {
           value={data.email}
           onChange={handleInputChange}
           placeholder="Your Email Address"
-          className="mb-4 p-2 rounded border w-full"
+          className="mb-4 p-2 rounded border w-full text-black"
         />
       </div>
 
-      <div className="mb-4">
+      <div className="">
         <label htmlFor="phone" className="block font-semibold mb-2">
           Phone Number
         </label>
@@ -78,7 +78,7 @@ const InputForm = ({ data, setData }) => {
           value={data.phone}
           onChange={handleInputChange}
           placeholder="Your Phone Number"
-          className="mb-4 p-2 rounded border w-full"
+          className="p-2 rounded border w-full text-black"
         />
       </div>
 
