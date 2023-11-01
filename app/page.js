@@ -36,12 +36,12 @@ const Home = () => {
       };
     }, [data]);
   
-
+    // <!DOCTYPE html>
+    // <html lang="en">
+    // <head><title></title>
+    // </head>
     const generateCode = (userData) => {
-        const template = `<!DOCTYPE html>
-    <html lang="en">
-    <head><title></title>
-    </head>
+        const template = `
     <body style="padding-bottom: 5px; font-size: 16px;">
         <div id="title" style="padding-bottom: 10px; line-height: 1.2;">
         ${userData.valediction ? userData.valediction : ''} <br> ${userData.name ? userData.name : ''} <br> ${
@@ -123,13 +123,13 @@ const Home = () => {
 </tr>
 </table>
         <img src="https://lh3.googleusercontent.com/d/1OhklmfN06gv2S2XoOZXUMHHcfqmavOYK" style="width: 100%; height: 2px; margin-top:12px" alt="">
-    </body>
-    </html>
+  
     `
 
         return template
     }
-
+  // </body>
+  //   </html>
     return (
         <div className=" h-full mt-4  color-black">
             <div className="">
