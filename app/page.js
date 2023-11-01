@@ -13,12 +13,12 @@ const Home = () => {
     companyLogo: 'https://lh3.googleusercontent.com/d/1o65M7OvQhTGfYX3MRX2N0U4MVHvKifp1',
     email: '',
     phone: '',
-    website: 'www.dosteducation.com',
+    website: 'https://www.dosteducation.com',
     linkedin: 'https://www.linkedin.com/company/17914642/',
     twitter: 'https://twitter.com/DostEducation',
     instagram: 'https://www.instagram.com/dosteducation/',
     youtube: 'https://www.youtube.com/c/DostEducation',
-    facebook: 'https://www.facebook.com/dosteducation/', // Add other social media links here
+    facebook: 'https://www.facebook.com/dosteducation/', 
   });
 
   useEffect(() => {
@@ -43,13 +43,11 @@ const Home = () => {
         <div id="title" style="padding-bottom: 10px; line-height: 1.2;">
         ${userData.valediction ? userData.valediction : ''} <br> ${userData.name ? userData.name : ''} <br> ${userData.position ? userData.position : ''}
         </div>
-       
-       
         <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
             <tr>
-                <td width=25%" style="border-right: 3px solid #727272;">
+                <td width=17%" style="border-right: 3px solid #727272;">
                     <a href="${userData.website ? userData.website : ''}">
-                        <img src="${userData.companyLogo ? userData.companyLogo : ''}" alt="Company Logo" style="display: block; width: 200;  margin-right: 28px;">
+                        <img src="${userData.companyLogo ? userData.companyLogo : ''}" width="120" alt="Company Logo" style="display: block;   margin-right: 28px;">
                     </a>
                 </td>
                 <td width="20">&nbsp;</td>
@@ -73,26 +71,19 @@ const Home = () => {
         <a href="${userData.website ? userData.website : ''}" style="text-decoration: none; color: #000;">${userData.website ? userData.website : ''}</a>
     </td>
 </tr>
-
-        
         <td colspan="5">
-
         <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-left:1px; margin-top:4px">
             <tr>
-
         <td >
                     <a href="${userData.facebook ? userData.facebook : ''}">
                         <img src="https://lh3.googleusercontent.com/d/1x6W1d0TvBITOJ9y6kTy61y_rw1CECtSZ" alt="Facebook" width="23">
                     </a>
                 </td>
-
-
                 <td >
                     <a href="${userData.instagram ? userData.instagram : ''}">
                         <img src="https://lh3.googleusercontent.com/d/10GawDpTY-lwC1C7ZhTpkxH0l8hfuf_X4" alt="Instagram" width="23">
                     </a>
                 </td>
-                
                 <td >
                     <a href="${userData.twitter ? userData.twitter : ''}">
                         <img src="https://lh3.googleusercontent.com/d/1Gvmrl2SRhkAW5HHDTsx6B94Yvbsifyhb" alt="Twitter" width="18" style="margin-right: 2px;">
@@ -117,10 +108,7 @@ const Home = () => {
       
   </td>
 </tr>
-
-
 </table>
-
         <img src="https://lh3.googleusercontent.com/d/1OhklmfN06gv2S2XoOZXUMHHcfqmavOYK" style="width: 100%; height: 2px; margin-top:12px" alt="">
     </body>
     </html>
@@ -143,10 +131,11 @@ const Home = () => {
           <InputForm  data={data} setData={setData} />
         </div>
         <div className=" w-1/2 pl-4  ">
-          <h2 className="text-xl font-semibold mb-2">Live Preview</h2>
+          <h2 className="text-xl font-semibold mb-2 underline">Live Preview</h2>
           <CodePreview data={data} generateCode={generateCode} />
         </div>
       </div>
+      <CodePreview data={data} generateCode={generateCode} />
     </div>
   );
 };

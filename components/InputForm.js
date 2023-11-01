@@ -1,3 +1,6 @@
+'use client'
+
+
 import React from 'react';
 
 const InputForm = ({ data, setData }) => {
@@ -30,7 +33,7 @@ const InputForm = ({ data, setData }) => {
         </label>
         <input
           type="text"
-          name="name"
+          name="names"
           value={data.name}
           onChange={handleInputChange}
           placeholder="Your Full Name"
