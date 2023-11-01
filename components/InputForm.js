@@ -1,6 +1,3 @@
-'use client'
-
-
 import React from 'react';
 
 const InputForm = ({ data, setData }) => {
@@ -13,8 +10,8 @@ const InputForm = ({ data, setData }) => {
   };
 
   return (
-    <div>
-       <div className="mb-4">
+    <div className='text-black'>
+       <div className="mb-4 ">
         <label htmlFor="name" className="block font-semibold mb-2">
         Valediction (Complimentary Close)
         </label>
