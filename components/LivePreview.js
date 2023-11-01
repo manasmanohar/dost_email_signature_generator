@@ -5,9 +5,10 @@ export default function LivePreview ({ data, generateCode })  {
 
   return (
     <div className="text-black">
-      <div className='bg-white p-4 w-full rounded-lg '  dangerouslySetInnerHTML={{ __html: generatedCode }}>
+      <div className='bg-white  w-full rounded-lg '  dangerouslySetInnerHTML={{ __html: generatedCode }}>
 
       </div>
+
 
 
      

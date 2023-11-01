@@ -10,9 +10,9 @@ const InputForm = ({ data, setData }) => {
   };
 
   return (
-    <div className='mb-0'>
-       <div className="mb-4 ">
-        <label htmlFor="name" className="block font-semibold mb-2">
+    <div >
+       <div className="mb-2 ">
+        <label htmlFor="name" className="block  mb-2">
         Valediction (Complimentary Close)
         </label>
         <input
@@ -24,8 +24,8 @@ const InputForm = ({ data, setData }) => {
           className="mb-4 p-2 rounded border w-full text-black"
         />
       </div>
-      <div className="mb-4">
-        <label htmlFor="name" className="block font-semibold mb-2">
+      <div className="mb-2">
+        <label htmlFor="name" className="block  mb-2">
           Full Name
         </label>
         <input
@@ -38,8 +38,8 @@ const InputForm = ({ data, setData }) => {
         />
       </div>
 
-      <div className="mb-4">
-        <label htmlFor="position" className="block font-semibold mb-2">
+      <div className="mb-2">
+        <label htmlFor="position" className="block  mb-2">
           Position
         </label>
         <input
@@ -54,8 +54,8 @@ const InputForm = ({ data, setData }) => {
 
       
 
-      <div className="mb-4">
-        <label htmlFor="email" className="block font-semibold mb-2 ">
+      <div className="mb-2">
+        <label htmlFor="email" className="block  mb-2 ">
           Email Address
         </label>
         <input
@@ -68,8 +68,8 @@ const InputForm = ({ data, setData }) => {
         />
       </div>
 
-      <div className="">
-        <label htmlFor="phone" className="block font-semibold mb-2">
+      <div className="mb-2">
+        <label htmlFor="phone" className="block  mb-2">
           Phone Number
         </label>
         <input
@@ -81,10 +81,6 @@ const InputForm = ({ data, setData }) => {
           className="p-2 rounded border w-full text-black"
         />
       </div>
-
-      
-
-    
     </div>
   );
 };

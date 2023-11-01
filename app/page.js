@@ -12,7 +12,7 @@ const Home = () => {
         name: 'Your Name',
         position: 'Your Position',
         companyLogo: 'https://lh3.googleusercontent.com/d/1o65M7OvQhTGfYX3MRX2N0U4MVHvKifp1',
-        email: 'youremail@dosteducation.com',
+        email: 'name@dosteducation.com',
         phone: '+9112345467890',
         website: 'https://www.dosteducation.com',
         linkedin: 'https://www.linkedin.com/company/17914642/',
@@ -36,16 +36,6 @@ const Home = () => {
       };
     }, [data]);
   
-  
-  
-    // useEffect(() => {
-    //     new Clipboard('#copy-button', {
-    //       text: function (trigger) {
-    //           alert('Copied to Clipboard')
-    //             return generateCode(data)
-    //         },
-    //     })
-    // }, [data])
 
     const generateCode = (userData) => {
         const template = `<!DOCTYPE html>
@@ -60,7 +50,7 @@ const Home = () => {
         </div>
         <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
             <tr>
-                <td width=17%" style="border-right: 3px solid #727272;">
+                <td width=25%" style="border-right: 3px solid #727272;">
                     <a href="${userData.website ? userData.website : ''}">
                         <img src="${
                             userData.companyLogo ? userData.companyLogo : ''
@@ -141,27 +131,35 @@ const Home = () => {
     }
 
     return (
-        <div className=" h-full m-12 color-black">
+        <div className=" h-full mt-4  color-black">
             <div className="">
                 <h2 className="text-3xl font-semibold mb-4  "> ✍️ MailSig </h2>
-                <h3 className="text-xl font-semibold mb-4 ">Email Signature Generator for Dost</h3>
+                <h3 className="text-xl font-semibold mb-4 ">Email Signature Generator for Dost DostEducation</h3>
             </div>
+              
+            <div className="flex flex-col lg:flex-row">
+              
+          <div className="lg:w-1/2   pr-4 border border-gray-500 rounded-lg p-4 mr-8">
+          <p className="text-lg underline font-semibold mb-2 ">
+                        Enter your details below
+                    </p> 
+            <InputForm data={data} setData={setData} />
+            <div className='w-full mt-4 border border-green-600 bg-green-300 p-4 rounded-lg'><p className=''>✅ Tip: After entering your details, carefully select the Signature preview using the cursor and copy-paste it into your email client</p>
+            </div>
+          </div>
 
-            <div className="flex ">
-                <div className="w-1/2 pr-4 border border-slate-200 rounded-lg p-4 mr-8">
-                    <h3 className="text-xl  text-gray-700 font-semibold mb-2 underline underline-offset-2">
-                        Enter your Data Below
-                    </h3>
-                    <InputForm data={data} setData={setData} />
-                </div>
-
-                <div className="flex flex-col h-full">
+                <div className="lg:w-1/2 flex flex-col h-full">
                     {' '}
-                    <h2 className="text-xl font-semibold mb-2 underline">Live Preview</h2>{' '}
-                    <div className="  border border-zinc-300 rounded-lg  p-4">
-                        <LivePreview data={data} generateCode={generateCode} />
-                    </div>
-                    <CodePreview data={data} generateCode={generateCode} />
+                    <h2 className="text-lg font-semibold mb-4 underline">Signature Preview</h2>{' '}
+                    <div className="border border-gray-400 rounded-lg  p-4 lg:mb-6 ">
+                    
+                   <LivePreview data={data} generateCode={generateCode} />
+
+
+                      </div>
+            
+                      <h2 className="text-lg font-semibold  underline">HTML Code</h2>
+                    <CodePreview  data={data} generateCode={generateCode} />
                 </div>
             </div>
 
