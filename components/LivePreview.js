@@ -35,7 +35,7 @@ const LivePreview = ({ data, generateCode }) => {
         {HTMLReactParser(generatedCode)}
       </div>
       <button className=" mt-4 w-full mb-4 p-2 bg-blue-500 text-white rounded" onClick={handleSelectPreview}>
-      Copy Singature
+      Copy Signature
       </button>
     </div>
   );
