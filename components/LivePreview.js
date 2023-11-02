@@ -7,19 +7,24 @@ const LivePreview = ({ data, generateCode }) => {
   const previewRef = useRef(null);
 
   const handleSelectPreview = () => {
+
     if (previewRef.current) {
       const range = document.createRange();
-      range.selectNode(previewRef.current);
-      window.getSelection().removeAllRanges();
-      window.getSelection().addRange(range);
-
-      try {
-        document.execCommand('copy');
-        alert('Copied to Clipboard');
-      } catch (error) {
-        console.error('Unable to copy to clipboard:', error);
-      } finally {
+      const contentNode = previewRef.current.firstChild; 
+      
+      if (contentNode) {
+        range.selectNode(contentNode);
         window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+
+        try {
+          document.execCommand('copy');
+          alert('Copied to Clipboard');
+        } catch (error) {
+          console.error('Unable to copy to clipboard:', error);
+        } finally {
+          window.getSelection().removeAllRanges();
+        }
       }
     }
   };
