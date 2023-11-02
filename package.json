@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "clipboard": "^2.0.11",
+    "clipboard-copy": "^4.0.1",
+    "html-react-parser": "^5.0.4",
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18"
