@@ -6,8 +6,8 @@
   --foreground-rgb: 0, 0, 0; /* Default text color */
   --bg-color-light: #FFFFFF; /* Light mode background color */
   --text-color-light: #000000; /* Light mode text color */
-  --bg-color-dark: #000000;   /* Dark mode background color */
-  --text-color-dark: #F9F9F9; /* Dark mode text color */
+  --bg-color-dark: #FFFFFF;   /* Dark mode background color */
+  --text-color-dark: #000000; /* Dark mode text color */
 }
 
 @media (prefers-color-scheme: dark) {
